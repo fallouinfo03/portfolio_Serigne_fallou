@@ -240,14 +240,32 @@
 </section>
 
 <section class="section" id="contact">
-    <h2>📬 (819)-329-7675 </h2>
-    <p>Email : fallouinfo03@gmail.com</p>
-    <p>GitHub : <a href="https://github.com/fallouinfo03" target="_blank">fallouinfo03</a></p>
+    <h2>📬 Contact</h2>
+
+    <div class="card" style="text-align:center;">
+        <p>Email : <strong>fallouinfo03@gmail.com</strong></p>
+        <p>GitHub : <a href="https://github.com/fallouinfo03" target="_blank">fallouinfo03</a></p>
+
+        <a href="mailto:fallouinfo03@gmail.com"
+           style="display:inline-block; padding:10px 20px; margin-top:10px; background:#0d6efd; color:white; border-radius:8px; text-decoration:none; font-weight:600;">
+           📩 Me contacter
+        </a>
+    </div>
 </section>
 
+
 <footer>
-    © 2025 - Portfolio Serigne
+    © <span id="year"></span> - Portfolio Serigne | Développé avec passion 💙
 </footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<a href="#top"
+   style="position:fixed; bottom:25px; right:25px; background:#0d6efd; color:white; padding:10px 15px; border-radius:50%; font-size:20px; text-decoration:none;">
+   ⬆
+</a>
 
 </body>
 </html>
