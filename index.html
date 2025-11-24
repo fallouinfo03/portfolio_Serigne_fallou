@@ -10,54 +10,68 @@
         margin: 0;
         padding: 0;
         font-family: "Segoe UI", Arial, sans-serif;
-        background: #f2f4f7;
+        background: linear-gradient(to bottom right, #1e3c72, #2a5298, #667eea, #764ba2);
+        background-attachment: fixed;
+        color: white;
     }
 
+    /* HEADER PREMIUM */
     header {
-        background: #0d6efd;
+        background: rgba(0,0,0,0.35);
+        backdrop-filter: blur(6px);
         color: white;
         padding: 15px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255,255,255,0.25);
     }
 
     header h1 {
         margin: 0;
         font-size: 1.4rem;
+        font-weight: 600;
     }
 
     nav a {
         margin-left: 20px;
-        color: white;
+        color: #e5e9ff;
         text-decoration: none;
         font-weight: 500;
         font-size: 1rem;
     }
 
     nav a:hover {
-        text-decoration: underline;
+        color: #64ffda;
+        text-shadow: 0 0 6px #64ffda;
     }
 
+    /* HERO PREMIUM */
     .hero {
         padding: 50px 20px;
         text-align: center;
-        background: white;
-        border-bottom: 1px solid #ddd;
+        background: rgba(255,255,255,0.12);
+        border-radius: 15px;
+        backdrop-filter: blur(4px);
+        margin: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
 
     .hero h2 {
         font-size: 2rem;
         margin-bottom: 10px;
-        color: #0948b3;
+        color: #e0e8ff;
     }
 
     .hero p {
         font-size: 1.2rem;
-        color: #555;
+        color: #d6dbff;
     }
 
+    /* SECTIONS */
     .section {
         padding: 40px 20px;
         max-width: 900px;
@@ -65,32 +79,40 @@
     }
 
     h2 {
-        color: #0d47a1;
+        color: #e3e7ff;
         font-size: 1.8rem;
         margin-bottom: 15px;
+        text-align: center;
     }
 
+    /* CARDS PREMIUM */
     .card {
         padding: 20px;
-        background: #ffffff;
-        border-radius: 10px;
+        background: rgba(255,255,255,0.12);
+        border-radius: 15px;
         margin-bottom: 20px;
-        border: 1px solid #e3e7ed;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        border: 1px solid rgba(255,255,255,0.25);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.45);
     }
 
     .card h3 {
         margin-top: 0;
-        color: #0d47a1;
+        color: #cdd4ff;
     }
 
     footer {
         text-align: center;
         padding: 15px;
-        background: #e9ecef;
-        color: #555;
+        background: rgba(255,255,255,0.15);
+        color: #e3e7ff;
         margin-top: 40px;
-        font-size: 0.9rem;
+        border-radius: 10px;
     }
 
     img {
@@ -98,7 +120,7 @@
     }
 
     img:hover {
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
 </style>
 
@@ -109,6 +131,7 @@
     <h1>Portfolio Serigne Fallou Mbacke</h1>
     <nav>
         <a href="#projets">Projets</a>
+        <a href="#skills">Compétences</a>
         <a href="#apropos">À propos</a>
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
@@ -118,7 +141,7 @@
 <div style="text-align:center; margin-top:20px;">
    <img src="https://raw.githubusercontent.com/fallouinfo03/portfolio-Serigne-/main/photo.jpeg"
         alt="Photo de profil"
-        style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:3px solid #0d6efd;">
+        style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:3px solid white;">
 </div>
 
 <section class="hero">
@@ -137,37 +160,37 @@
 
     <div class="card">
         <h3>🏡 Régression linéaire multiple – Prix des appartements (R)</h3>
-        <p>Analyse statistique et création d’un modèle de régression multiple pour prédire les prix.</p>
+        <p>Analyse statistique et création d’un modèle pour prédire les prix immobiliers.</p>
         <p><strong>Technologies :</strong> R, ggplot2, Statistiques</p>
     </div>
 
     <div class="card">
         <h3>🌐 Hadoop MapReduce – Analyse de logs</h3>
-        <p>Traitement distribué de gros fichiers et extraction de statistiques avec Hadoop MapReduce.</p>
+        <p>Traitement distribué de fichiers volumineux avec Hadoop et extraction de statistiques.</p>
         <p><strong>Technologies :</strong> Hadoop, Docker, MapReduce</p>
     </div>
 
     <div class="card">
         <h3>📇 Gestionnaire de contacts (Java + MySQL)</h3>
-        <p>Application console permettant d’ajouter, modifier et supprimer des contacts dans une base MySQL.</p>
+        <p>Application console permettant de gérer une base de contacts en MySQL.</p>
         <p><strong>Technologies :</strong> Java, JDBC, MySQL</p>
     </div>
 
     <div class="card">
         <h3>🔥 Modèle Deep Learning – Heating Load</h3>
-        <p>Modèle prédictif permettant d’optimiser la consommation énergétique des bâtiments.</p>
+        <p>Modèle prédictif pour optimiser la consommation énergétique des bâtiments.</p>
         <p><strong>Technologies :</strong> Python, Machine Learning, Scikit-Learn</p>
     </div>
 
     <div class="card">
-        <h3>🚍 Gestion avancée d’une base de données (SQL)</h3>
-        <p>Base de données complète pour gérer une société de transport (bus inter-villes).</p>
+        <h3>🚍 Base de données – Gestion de transport SQL</h3>
+        <p>Création d’une base de données complète pour gérer une entreprise de bus.</p>
         <p><strong>Technologies :</strong> SQL, MySQL Workbench</p>
     </div>
 
     <div class="card">
-        <h3>☁️ Déploiement sur AWS – Annuaire des employés</h3>
-        <p>Déploiement d’une application dans le cloud avec EC2, RDS, S3 et Load Balancer.</p>
+        <h3>☁️ Déploiement AWS – Annuaire employés</h3>
+        <p>Mise en production d’une application cloud via EC2, RDS, S3 et Load Balancer.</p>
         <p><strong>Technologies :</strong> AWS, Cloud Computing</p>
     </div>
 
@@ -188,7 +211,7 @@
 
     <div class="card">
         <h3>Bases de données</h3>
-        <p>MySQL, MongoDB, SQL avancé, Modélisation</p>
+        <p>MySQL, MongoDB, Modélisation de données</p>
     </div>
 
     <div class="card">
@@ -209,39 +232,35 @@
 
 <section class="section" id="apropos">
     <h2>👨‍🎓 À propos</h2>
+    <div class="card">
     <p>
-        Je m'appelle <strong>Serigne Fallou Mbacke</strong>, étudiant en 
-        <strong>Sciences des données appliquées</strong> au Collège La Cité (Ontario, Canada).
-        Passionné par l’analyse, les statistiques, l’IA et les technologies cloud, 
-        mon objectif est de devenir <strong>Data Analyst</strong> ou <strong>Data Scientist</strong>.
+        Je suis <strong>Serigne Fallou Mbacke</strong>, étudiant en 
+        <strong>Sciences des données appliquées</strong> au Collège La Cité.
     </p>
-
     <p>
-        Je m’intéresse particulièrement aux domaines de 
-        l’<strong>intelligence artificielle</strong>,
-        du <strong>machine learning</strong> et de l’optimisation des systèmes 
-        à travers la donnée.
+        Passionné par l’<strong>intelligence artificielle</strong>, le 
+        <strong>machine learning</strong> et l’analyse de données, mon objectif est 
+        de devenir <strong>Data Analyst</strong> ou <strong>Data Scientist</strong>.
     </p>
-
     <p>
-        J’ai travaillé sur plusieurs projets concrets : 
-        analyse de données, machine learning, déploiement cloud sur AWS, applications en Java, 
-        bases de données SQL, Big Data avec Hadoop et visualisation avec Power BI.
+        J’ai travaillé sur plusieurs projets concrets : data cleaning, machine learning,
+        cloud AWS, Java/MySQL, SQL avancé, Big Data et visualisation.
     </p>
-
     <p>
-        Je suis motivé par l’envie de progresser, d’apprendre continuellement 
-        et de participer à des projets à fort impact.
+        Je veux contribuer à des projets à fort impact en exploitant l’intelligence artificielle.
     </p>
+    </div>
 </section>
 
 <section class="section" id="cv">
     <h2>📄 CV</h2>
-    <p>
-        <a href="https://raw.githubusercontent.com/fallouinfo03/portfolio-Serigne-/main/CV%20FADEL.pdf" target="_blank">
-            Télécharger mon CV
+    <div class="card" style="text-align:center;">
+        <a href="https://raw.githubusercontent.com/fallouinfo03/portfolio-Serigne-/main/CV%20FADEL.pdf" 
+           target="_blank" 
+           style="color:white; text-decoration:underline;">
+           📥 Télécharger mon CV
         </a>
-    </p>
+    </div>
 </section>
 
 <section class="section" id="contact">
@@ -249,10 +268,10 @@
 
     <div class="card" style="text-align:center;">
         <p>Email : <strong>fallouinfo03@gmail.com</strong></p>
-        <p>GitHub : <a href="https://github.com/fallouinfo03" target="_blank">fallouinfo03</a></p>
+        <p>GitHub : <a href="https://github.com/fallouinfo03" target="_blank" style="color:#64ffda;">fallouinfo03</a></p>
 
         <a href="mailto:fallouinfo03@gmail.com"
-           style="display:inline-block; padding:12px 24px; margin-top:15px; background:#0d6efd; color:white; border-radius:30px; text-decoration:none; font-weight:600; box-shadow:0 4px 10px rgba(0,0,0,0.15); transition:0.3s;">
+           style="display:inline-block; padding:12px 24px; margin-top:15px; background:#64ffda; color:#003f5c; border-radius:30px; text-decoration:none; font-weight:700; box-shadow:0 4px 12px rgba(0,0,0,0.3); transition:0.3s;">
            📩 Me contacter
         </a>
     </div>
@@ -267,7 +286,7 @@
 </script>
 
 <a href="#top"
-   style="position:fixed; bottom:25px; right:25px; background:#0d6efd; color:white; padding:10px 15px; border-radius:50%; font-size:20px; text-decoration:none;">
+   style="position:fixed; bottom:25px; right:25px; background:#64ffda; color:#212121; padding:12px 15px; border-radius:50%; font-size:20px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
    ⬆
 </a>
 
