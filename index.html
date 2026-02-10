@@ -6,7 +6,7 @@
     <title>Portfolio - Serigne</title>
     
 <style>
-    /* BASE STYLE */
+    /* v002 */
     body {
         margin: 0;
         padding: 0;
@@ -16,7 +16,7 @@
         color: white;
     }
 
-    /* HEADER PREMIUM */
+    /* HEADER */
     header {
         background: rgba(0,0,0,0.35);
         backdrop-filter: blur(6px);
@@ -50,7 +50,7 @@
         text-shadow: 0 0 6px #64ffda;
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
         padding: 50px 20px;
         text-align: center;
@@ -96,27 +96,25 @@
         color: #cdd4ff;
     }
 
-    /* BOUTON GITHUB */
-    .btn-github {
+    /* BOUTON GITHUB SPECIAL */
+    .btn-link {
         display: inline-block;
         margin-top: 15px;
         color: #64ffda;
         text-decoration: none;
         font-weight: 600;
-        border: 2px solid #64ffda;
-        padding: 8px 20px;
-        border-radius: 25px;
-        transition: all 0.3s ease;
+        border: 1px solid #64ffda;
+        padding: 8px 18px;
+        border-radius: 20px;
+        transition: 0.3s;
     }
 
-    .btn-github:hover {
+    .btn-link:hover {
         background: #64ffda;
         color: #1e3c72;
-        box-shadow: 0 0 15px #64ffda;
-        transform: scale(1.05);
+        box-shadow: 0 0 10px #64ffda;
     }
 
-    /* FOOTER */
     footer {
         text-align: center;
         padding: 15px;
@@ -126,21 +124,16 @@
         border-radius: 10px;
     }
 
-    /* ANIMATIONS */
-    @keyframes fadeInLeft {
-        from { opacity: 0; transform: translateX(-40px); }
-        to { opacity: 1; transform: translateX(0); }
-    }
+    img { transition: 0.3s; }
+    img:hover { transform: scale(1.08); }
 
-    @keyframes fadeInRight {
-        from { opacity: 0; transform: translateX(40px); }
-        to { opacity: 1; transform: translateX(0); }
-    }
+    @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
 
 </style>
 
 </head>
-<body id="top">
+<body>
 
 <header>
     <h1>Portfolio Serigne Fallou Mbacke</h1>
@@ -156,20 +149,16 @@
 <section class="hero" style="display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap;">
     <img src="https://raw.githubusercontent.com/fallouinfo03/portfolio-Serigne-/main/photo.jpeg"
         alt="Photo de profil"
-        style="width:180px; height:180px; border-radius:50%; object-fit:cover; border:3px solid white;
-        animation: fadeInLeft 1s ease-out;">
+        style="width:180px; height:180px; border-radius:50%; object-fit:cover; border:3px solid white; animation: fadeInLeft 1s ease-out;">
 
     <div style="max-width:450px; animation: fadeInRight 1s ease-out; text-align: left;">
-        <h2 style="font-size:2rem; margin-bottom:10px; color:#e0e8ff; text-align: left;">
-            Bienvenue sur mon portfolio 👋
-        </h2>
+        <h2 style="font-size:2rem; margin-bottom:10px; color:#e0e8ff; text-align: left;">Bienvenue sur mon portfolio 👋</h2>
         <p style="font-size:1.2rem; color:#d6dbff;">
             Étudiant en Science des données appliquées<br>
             Passionné par l’IA, le machine learning et la data.
         </p>
     </div>
 </section>
-
 
 <section class="section" id="projets">
     <h2>📊 Projets Académiques</h2>
@@ -194,13 +183,10 @@
 
     <div class="card">
         <h3>📇 Gestionnaire de contacts (Java + MySQL)</h3>
-        <p>Application console permettant de gérer une base de contacts. Projet collaboratif axé sur la POO et JDBC.</p>
+        <p>Application console permettant de gérer une base de contacts en MySQL via JDBC.</p>
         <p><strong>Technologies :</strong> Java, JDBC, MySQL, Regex</p>
         <a href="https://github.com/fallouinfo03/Projet_Java_d-veloppement_d-une_application_de_gestion_de_contact" 
-           target="_blank" 
-           class="btn-github">
-           📂 Voir le code sur GitHub
-        </a>
+           target="_blank" class="btn-link">📂 Voir le code sur GitHub</a>
     </div>
 
     <div class="card">
@@ -224,17 +210,35 @@
 
 <section class="section" id="skills">
     <h2>🛠️ Compétences</h2>
+
     <div class="card">
-        <h3>Programmation & Bases de données</h3>
-        <p>Python (Pandas, Scikit-Learn), SQL (MySQL, MongoDB), Java, R, Git/GitHub</p>
+        <h3>Langages de programmation</h3>
+        <p>Python, SQL, Java, R, Git, Github </p>
     </div>
+
+    <div class="card">
+        <h3>Data Science & Machine Learning</h3>
+        <p>Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, TensorFlow</p>
+    </div>
+
+    <div class="card">
+        <h3>Bases de données</h3>
+        <p>MySQL, MongoDB, Modélisation de données</p>
+    </div>
+
     <div class="card">
         <h3>Big Data & Cloud</h3>
-        <p>Hadoop MapReduce, AWS (EC2, RDS, S3), Docker</p>
+        <p>Hadoop MapReduce, AWS (EC2, RDS, S3, Load Balancer)</p>
     </div>
+
     <div class="card">
-        <h3>Visualisation</h3>
-        <p>Power BI, Tableau, Excel, ggplot2</p>
+        <h3>Visualisation & BI</h3>
+        <p>Power BI, Excel, Tableau</p>
+    </div>
+
+    <div class="card">
+        <h3>Soft Skills</h3>
+        <p>Analyse critique, Résolution de problèmes, Travail d’équipe, Autonomie</p>
     </div>
 </section>
 
@@ -242,7 +246,9 @@
     <h2>👨‍🎓 À propos</h2>
     <div class="card">
         <p>Je suis <strong>Serigne Fallou Mbacke</strong>, étudiant en <strong>Sciences des données appliquées</strong> au Collège La Cité.</p>
-        <p>Passionné par l'IA et l'analyse de données, mon objectif est de devenir Data Scientist.</p>
+        <p>Passionné par l’<strong>intelligence artificielle</strong>, le <strong>machine learning</strong> et l’analyse de données, mon objectif est de devenir <strong>Data Analyst</strong> ou <strong>Data Scientist</strong>.</p>
+        <p>J’ai travaillé sur plusieurs projets concrets : data cleaning, machine learning, cloud AWS, Java/MySQL, SQL avancé, Big Data et visualisation.</p>
+        <p>Je veux contribuer à des projets à fort impact en exploitant l’intelligence artificielle.</p>
     </div>
 </section>
 
@@ -250,10 +256,7 @@
     <h2>📄 CV</h2>
     <div class="card" style="text-align:center;">
         <a href="https://raw.githubusercontent.com/fallouinfo03/portfolio-Serigne-/main/CV_Serigne_FAllou_MBACKE.pdf" 
-           target="_blank" 
-           style="color:#64ffda; text-decoration:underline; font-weight: bold;">
-           📥 Télécharger mon CV (PDF)
-        </a>
+           target="_blank" style="color:white; text-decoration:underline;">📥 Télécharger mon CV</a>
     </div>
 </section>
 
@@ -262,26 +265,17 @@
     <div class="card" style="text-align:center;">
         <p>Email : <strong>fallouinfo03@gmail.com</strong></p>
         <p>GitHub : <a href="https://github.com/fallouinfo03" target="_blank" style="color:#64ffda;">fallouinfo03</a></p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/serigne-fallou-mbacke-5447a0353" target="_blank" style="color:#64ffda;">Profil de Serigne</a></p>
-        <a href="mailto:fallouinfo03@gmail.com"
-           style="display:inline-block; padding:12px 24px; margin-top:15px; background:#64ffda; color:#1e3c72; border-radius:30px; text-decoration:none; font-weight:700; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-           📩 Me contacter
-        </a>
+        <p>Linkedin : <a href="https://www.linkedin.com/in/serigne-fallou-mbacke-5447a0353" target="_blank" style="color:#64ffda;">Serigne Fallou Mbacke</a></p>
+        <a href="mailto:fallouinfo03@gmail.com" 
+           style="display:inline-block; padding:12px 24px; margin-top:15px; background:#64ffda; color:#003f5c; border-radius:30px; text-decoration:none; font-weight:700; box-shadow:0 4px 12px rgba(0,0,0,0.3);">📩 Me contacter</a>
     </div>
 </section>
 
-<footer>
-    © <span id="year"></span> - Portfolio Serigne | Développé avec passion 
-</footer>
+<footer>© <span id="year"></span> - Portfolio Serigne | Développé avec passion</footer>
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
-<a href="#top"
-   style="position:fixed; bottom:25px; right:25px; background:#64ffda; color:#212121; padding:12px 15px; border-radius:50%; font-size:20px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index: 100;">
-   ⬆
-</a>
+<a href="#top" style="position:fixed; bottom:25px; right:25px; background:#64ffda; color:#212121; padding:12px 15px; border-radius:50%; font-size:20px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);">⬆</a>
 
 </body>
 </html>
